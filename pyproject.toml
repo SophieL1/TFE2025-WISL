@@ -1,0 +1,32 @@
+[project]
+name = "TFE2025-WISL"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.11"
+dependencies = [
+  "differt",
+  "equinox>=0.11.12",
+  "jax>=0.5.2",
+  "matplotlib>=3.10.1",
+  "optax>=0.2.4",
+  "plotly<6",
+  "pandas>=2", 
+  "vispy>=0.14", 
+  "jupyter_rfb>=0.5.0"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[dependency-groups]
+cuda = [
+  "jax[cuda]>=0.5.2",
+]
+dev = [
+  "jupyter>=1.1.1",
+  "line-profiler>=4.2.0",
+  "snakeviz>=2.2.2",
+]
+
+[tool.uv.sources]
+differt = { path = "../DiffeRT-fork/differt", editable = true }
