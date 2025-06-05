@@ -1,6 +1,3 @@
-import jax
-import jax.numpy as jnp
-import equinox as eqx
 from differt.scene import TriangleScene
 from typing import Literal
 import numpy as np
